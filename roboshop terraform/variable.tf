@@ -14,6 +14,6 @@ variable "zone_id" {
     default = "Z03035903COPLEGQ5980F"
 }
 
-Variable "domain_name" {
+variable "domain_name" {
     default =  "naifah.online"
 }
