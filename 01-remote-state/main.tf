@@ -1,4 +1,4 @@
-resource "null_resources" test {}
+resource "null_resource" test {}
 
 terraform {
   backend "s3" {
