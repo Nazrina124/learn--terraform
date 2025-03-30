@@ -1,5 +1,5 @@
 
-resource "aws_instance" "intances" {
+resource "aws_instance" "instances" {
     for_each = var.components
   ami           = data.aws_ami.ami.image_id
   instance_type = each.value["instance_type"]
