@@ -13,6 +13,8 @@ data "aws_security_groups" "sg" {
 
 }
 
+
 data "aws_route53_zone" "zone" {
-  name         = "var.domain_name"
+  name         = "naifah.online"  # Ensure the dot at the end is included
+  private_zone = false
 }
