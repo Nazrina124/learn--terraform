@@ -1,4 +1,4 @@
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "test" {
     for_each = var.components
   zone_id = "Z03035903COPLEGQ5980F"
   name    = "$test.naifah.online"
