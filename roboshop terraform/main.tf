@@ -15,7 +15,7 @@ resource "aws_route53_record" "frontend" {
   name    = "frontend.dev.${var.domain_name}"
   type    = "A"
   ttl     = 3
-  records = [aws_instance.frontend.172.31.18.59]
+  records = [aws_instance.frontend."172.31.18.59"]
 }
 
 resource "aws_instance" "mongo" {
@@ -33,7 +33,7 @@ resource "aws_route53_record" "mongo" {
   name    = "mongo.dev.${var.domain_name}"
   type    = "A"
   ttl     = 3
-  records = [aws_instance.mongo.172.31.25.203]
+  records = [aws_instance.mongo."172.31.25.203"]
 }
 
 resource "aws_instance" "catalogue" {
@@ -51,5 +51,5 @@ resource "aws_route53_record" "catalogue" {
   name    = "catalogue.dev.${var.domain_name}"
   type    = "A"
   ttl     = 3
-  records = [aws_instance.catalogue.172.31.17.220]
+  records = [aws_instance.catalogue."172.31.17.220"]
 }
