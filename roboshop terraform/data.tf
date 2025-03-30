@@ -13,6 +13,6 @@ data "aws_security_groups" "sg" {
 
 }
 
-data "aws_route53_zone" "zone_id" {
+data "aws_route53_zone" "zone" {
   name         = "var.domain_name"
 }
