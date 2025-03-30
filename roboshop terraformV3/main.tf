@@ -7,7 +7,7 @@ resource "aws_instance" "instances" {
 
 
   tags = {
-    Name = "{each.key]}.dev"
+    Name = "{each.key}.dev"
   }
 }
 
