@@ -5,7 +5,7 @@ resource "aws_instance" "test" {
 
 
   tags = {
-    Name = "frontend"
+    Name = "test"
   }
 }
 
