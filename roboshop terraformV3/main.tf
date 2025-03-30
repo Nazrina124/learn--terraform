@@ -14,7 +14,7 @@ resource "aws_instance" "instances" {
 resource "aws_route53_record" "frontend" {
     for_each =var.components
   zone_id = data.aws_route53_zone.zone.zone_id
-  name    = {each.key}.dev.${var.domain_name}"
+  name    = {each.key}.dev.{var.domain_name}"
   type    = "A"
   ttl     = 3
   records = [aws_instance.instances.[each.key].private_ip]
