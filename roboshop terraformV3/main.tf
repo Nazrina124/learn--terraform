@@ -17,6 +17,6 @@ resource "aws_route53_record" "frontend" {
   name    = "${each.key}.dev.${var.domain_name}"
   type    = "A"
   ttl     = 3
-  records = [aws_instance.instances.[each.key].private_ip]
+  records = [aws_instance.instances[each.key].private_ip]
 }
 
