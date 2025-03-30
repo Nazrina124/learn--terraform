@@ -12,5 +12,5 @@ variable "instance_type" {
 # }
 
 variable "domain_name" {
-    default =  "naifah.online"
+    default =  "naifah.online."
 }
