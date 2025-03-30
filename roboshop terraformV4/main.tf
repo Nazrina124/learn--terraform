@@ -30,7 +30,7 @@ resource "null_resource" "ansible" {
       connection {
         user = "ec2-user"
         password ="DevOps321"
-        host = [aws_instance.instances[each.key].private_ip]
+        host = aws_instance.instances[each.key].private_ip
 
         }
 
