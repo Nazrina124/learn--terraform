@@ -15,6 +15,6 @@ variable "components" {
 #          }
 #         mongo = {
 #                     instance_type = "t3.micro"
-#         }
-#   }
+         }
+   }
 }
