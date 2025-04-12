@@ -16,5 +16,5 @@ resource "local_file" "foo" {
 }
 
 output "test" {
- value = "data.vault_generic_secret.rundeck_auth.data["MYPASS"]"
+ value = data.vault_generic_secret.rundeck_auth.data["MYPASS"]
 }
