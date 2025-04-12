@@ -15,6 +15,6 @@ resource "local_file" "foo" {
   filename = "tmp/foo.bar"
 }
 
-output "" {
-    value = "data.vault_generic_secret.rundeck_auth.data["MYPASS"]"
+output "test" {
+ value = "data.vault_generic_secret.rundeck_auth.data["MYPASS"]"
 }
