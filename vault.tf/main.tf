@@ -11,7 +11,7 @@ provider "vault" {
 }
 
 resource "local_file" "foo" {
-  content  = "data.vault_generic_secret.rundeck_auth.data["MYPASS"]"
+  content  = data.vault_generic_secret.rundeck_auth.data["MYPASS"]
   filename = "tmp/foo.bar"
 }
 
