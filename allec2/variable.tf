@@ -10,7 +10,7 @@ variable "components" {
         frontend = {}
         mongo = {}
         catalogue = {} 
-        redis = {
+        redis = {}
         rabbitmq = {}
         mysql = {}
         user   = {}
@@ -21,4 +21,3 @@ variable "components" {
         
         }        
      }
-   }
