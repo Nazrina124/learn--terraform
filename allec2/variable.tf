@@ -10,14 +10,6 @@ variable "components" {
         frontend = {}
         mongo = {}
         catalogue = {} 
-        redis = {}
-        rabbitmq = {}
-        mysql = {}
-        user   = {}
-        cart = {}
-        shipping = {}
-        payment = {}
-        dispatch = {}
-        
+    
         }        
      }

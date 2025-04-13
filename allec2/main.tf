@@ -24,20 +24,21 @@ resource "aws_route53_record" "dns_record" {
 
 
 resource "null_resource" "ansible" {
-  depends_on = [aws_route53_record.dns_record]
-  for_each   = var.components
+    depends_on = [aws_route53_record.dns_record]
+    for_each = var.components
+    provisioner "remote-exec" {
+      connection {
+        user = "ec2-user"
+        password ="DevOps321"
+        host = aws_instance.instances[each.key].private_ip
 
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    password = "DevOps321"
-    host     = aws_instance.instances[each.key].private_ip
-  }
+        }
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/Nazrina412/Ansible-Robo main.yml -e env=dev -e role_name=${each.key}"
-    ]
-  }
+       inline = [
+        "sudo pip-3.11 install ansible",
+        "ansible-pull -i localhost, -U https://github.com/Nazrina412/Ansible-Robo main.yml -e env=dev -e role_name=${each.key}"
+        ]
+
+   }
+
 }
