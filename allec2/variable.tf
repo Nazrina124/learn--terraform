@@ -9,7 +9,16 @@ variable "components" {
     default =  {
         frontend = {}
         mongo = {}
-        catalogue = {} 
+        catalogue = {}
+        Redis = {}
+        User = {}
+        cart= {}
+        mysql = {}
+        shipping = {}
+        Rabbitmq = {}
+        payment = {}
+        Dispatch = {}
+
     
         }        
      }
